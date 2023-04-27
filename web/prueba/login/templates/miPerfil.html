@@ -1,0 +1,108 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+   <!-- JQUERY -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <!-- DataTable -->
+   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+ 
+   {% comment %} font awesome {% endcomment %}
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="{% static 'js/miPerfil.js' %}" type="module" defer></script>
+    
+    <link rel="stylesheet" href="{% static 'css/miPerfil.css' %}">
+    <main>
+      <div class="container-data">
+        
+        <div class="containers">
+          {% if usu == request.user %}
+            <h1 class="head">Mi perfil</h1>
+          {% else %}
+           <h1 class="head">Perfil de {{usu.username}}</h1>
+          {% endif %}
+        <ul>
+          <li>
+            <label for="info" id="label-info">Información</label>
+          </li>
+          <li>
+            <label for="about" id="label-about">Sobre mí</label>
+          </li>
+          {% if mostrar %}
+          <li>
+            <label for="list" id="label-list">Mi lista</label>
+          </li>
+          {% endif %}
+        </ul>
+        <div class="info esconder">
+          <h1 class="title" style="font-weight: bold; padding: 10px;">Información sobre el usuario</h1>
+          <table class="table-info">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <th>Nombre de usuario:</th>
+                <td>{{ usu.username }}</td>
+              </tr>
+              <tr>
+                <th>Correo:</th>
+                <td>{{usu.email}}</td>
+              </tr>
+              <tr>
+                <th>Fecha de unión:</th>
+                <td>{{fecha_union}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      <div class="about esconder desaparecer">
+          <h1 class="title">Sobre mí</h1>
+          {% if user.biografia %}
+            <p>{{ user.biografia }}</p>
+            {% else %}
+            <p>No se ha encontrado ninguna biografía de este usuario.</p>
+          {% endif %}
+          
+        </div>
+      </div>
+
+
+       
+        </div>
+
+        {% if user.is_authenticated %} {% if mostrar %}
+        
+        <div class="list esconder desaparecer">
+          <h1 class="title"> Mi lista de libros</h1>
+            <table class="table-libros" id="tabla-libros" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>Autor</th>
+                  <th>Estado</th>
+                  <th>Página</th>
+                </tr>
+              </thead>
+              <tbody>
+               {% for libro in libros %}
+                  <tr>
+                    <td>{{libro.book.titulo}}</td>
+                    <td>{{libro.book.autor}}</td>
+                    <td>{{libro.estado|capfirst}}</td>
+                    <td><a href="/libros/getBooks/{{libro.book.isbn}}">Link</a></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table> 
+        </div>
+        {% endif %}{% endif %}
+      </main>
+{% endblock %}

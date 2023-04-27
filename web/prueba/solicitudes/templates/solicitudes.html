@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="{% static 'solicitudes.js' %}" type="module" defer></script>
+  <link rel="stylesheet" href="{% static 'css/solicitudes.css' %}">
+  
+{% endblock %}
+
+{% block content %}
+  <main>
+    <h1>Solicitudes</h1>
+    <table id="tTabLibros">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Perfil</td>
+                <td>...</td>
+            </tr>
+        </thead>
+        <tbody>
+           {% for solicitud in solicitudes %}
+           
+           <tr>
+               <td>{{solicitud.usuario}}</td>
+               <td class="buttons">
+                <form action="/profile/" method="POST">
+                    {% csrf_token %}
+                    <input type="radio" name="username" value="{{solicitud.usuario}}" checked style="display: none">
+                    <button type="submit" style="appearance: none; background: none; border: none;">
+                        Link
+                    </button>
+                </form>
+               </td>
+               <td class="buttons">
+                   <form action="/solicitudes/responder/" class="aceptar" method="POST">
+                    {% csrf_token %}
+                       <input type="radio" name="id_solicitud" id="" value="{{solicitud.id}}" style="display: none" checked>
+                       <input type="radio" name="respuesta" id="" value="aceptar" style="display: none" checked>
+                       <button type="submit" style="appearance: none; background: none; border: 0;"><i class="fa-solid fa-check"></i></button>
+                    </form>
+                    <form action="/solicitudes/responder/"action="" class="rechazar" method="POST">
+                        {% csrf_token %}
+                        <input type="radio" name="id_solicitud" id="" value="{{solicitud.id}}" style="display: none" checked>
+                        <input type="radio" name="respuesta" id="" value="rechazar" style="display: none" checked>
+                        <button type="submit" style="appearance: none; background: none; border: 0;"><i class="fa-solid fa-x"></i></button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </main>
+{% endblock %}

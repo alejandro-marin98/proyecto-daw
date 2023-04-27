@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 3rem;
+  padding-bottom: 12px;
+  border-bottom: solid 1px whitesmoke;
+  margin-bottom: 60px;
+}
+
+
+body {
+  width: 100%;
+}
+
+nav {
+  grid-area: nav;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+
+}
+.form-login {
+  background-color: rgba(34, 131, 192, 0.858) !important;
+  border-radius: 20px;
+  min-width: max-content !important;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  height: max-content;
+}
+
+.form-login div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-login label {
+  font-size: 2rem;
+}
+
+
+.form-group label {
+  color: white !important;
+}
+
+.form-login {
+  display: flex !important;
+  flex-direction: column !important;
+  /* gap: 40px !important; */
+}
+
+.form-group div {
+  display: flex !important;
+  flex-direction: column !important;
+
+}
+
+.entrar {
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+.form-login>div {
+  width: 100% !important;
+}
+
+.form-login {
+  padding: 30px;
+  max-width: 100% !important;
+}
+
+.form-group div div {
+  width: 100%;
+}
+strong, p {
+  font-size: 1.4rem;
+  /* position: absolute;
+  z-index: 999; */
+}
+
+#div_id_password, 
+#div_id_password *, 
+#div_id_username,
+#div_id_username * {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.3rem;
+}
+
+#div_id_password label, 
+#div_id_username label {
+  font-size: 1.8rem;
+} 
+
+#div_id_password,
+#div_id_username {
+  text-align: center;
+}
+
+.entrar {
+  width: 30%;
+  background-color: white;
+  border: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .form-login {
+    width: 95vw;
+    max-width: 95vw;
+  }  
+  #div_id_password,
+  strong, p {
+    font-size: 0.85rem !important;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  :root {
+    font-size: 20px;
+  }
+  #div_id_password,
+  strong, p {
+    font-size: 1.4rem !important;
+    width: 80%;
+  }
+}

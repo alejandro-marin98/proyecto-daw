@@ -1,0 +1,262 @@
+#tTabLibros_wrapper {
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(185, 182, 220, 1) 0%, rgba(148, 187, 233, 1) 100%) !important;
+    padding: 50px;
+    border-radius: 20px;
+    width: 70% !important;
+    max-width: 70% !important;
+    height: min-content;
+    margin-bottom: 30px;
+}
+
+#tTabLibros_wrapper td,
+#tTabLibros_wrapper th {
+    font-size: 1.6rem !important;
+}
+
+#tTabLibros_wrapper a,
+#tTabLibros_wrapper label,
+#tTabLibros_wrapper #tTabLibros_info {
+    font-size: 1.3rem !important;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100vw;
+    max-width: 100vw;
+    margin-bottom: 50px;
+
+}
+
+tbody,
+thead,
+div label {
+    color: rgb(17, 39, 85) !important;
+    font-size: 1.3rem;
+}
+
+.isbn {
+    display: none;
+}
+
+#tTabLibros_wrapper {
+    max-width: 100vw !important;
+    width: 100%;
+}
+
+#tTabLibros {
+    width: 100% !important;
+    overflow-x: scroll;
+    font-size: 0.8rem
+}
+
+.dataTables_wrapper * {
+    font-size: 1rem;
+}
+
+.nombre_clase::before,
+.nombre_clase::after {
+    display: none !important;
+}
+
+input[type="search"],
+select {
+    border: solid 1px white !important;
+}
+
+.dataTables_length {
+    display: none !important;
+}
+
+main h1 {
+    border-bottom: solid 1px white;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+
+th::after, th::before {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #tabla-libros_filter {
+        display: none;
+    }
+
+    #tTabLibros_wrapper td,
+    #tTabLibros_wrapper th {
+        font-size: 1.2rem !important;
+    }
+    
+    table td {
+        max-width: 100px !important;
+        margin: 30px !important;
+    }
+    
+
+    table tr,
+    table {
+        min-width: max-content;
+    }
+
+    .dataTables_filter,
+    .dataTables_scroll {
+        width: 95% !important;
+    }
+
+    .dataTables_scroll {
+        margin-bottom: 40px;
+        padding-bottom: 50px !important;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+    }
+
+    :root {
+        font-size: 14px !important;
+    }
+
+    #tTabLibros_wrapper {
+        min-width: 100vw;
+        padding: 0;
+    }
+
+    tbody,
+    thead,
+    div label {
+        color: whitesmoke !important;
+        font-size: 2rem;
+    }
+
+    #tTabLibros_wrapper #tTabLibros {
+        max-width: 100vw !important;
+        padding: 0;
+        font-size: 0.7rem;
+        width: 100% !important;
+        overflow: scroll !important;
+    }
+
+    #tTabLibros_wrapper * {
+        font-size: 1.1rem;
+    }
+
+    #tTabLibros_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tTabLibros_wrapper tr,
+    #tTabLibros_wrapper td {
+        font-weight: 500;
+    }
+
+    #tTabLibros_wrapper a {
+        -webkit-text-stroke: initial;
+        font-weight: initial;
+    }
+
+
+    .dataTables_filter label {
+        font-size: 1rem !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        vertical-align: middle;
+    }
+
+    .dataTables_filter label input {
+        height: 60%;
+        width: 40% !important;
+    }
+
+    .dataTables_filter {
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .dataTables_scroll {
+        padding: 0 20px 40px 20px !important;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .dataTables_scroll,
+    .dataTables_filter {
+        background-color: rgba(84, 143, 225, 0.458) !important;
+    }
+
+    .dataTables_filter {
+        padding: 1rem !important;
+    }
+
+    .dataTables_info,
+    .dataTables_paginate a {
+        /* .dataTables_paginate span { */
+        padding: 0 0 10px 0 !important;
+        margin: 0 !important;
+        font-size: 1.3rem !important;
+        margin: 0 3px !important;
+    }
+
+    .dataTables_filter {
+        padding: 30px 0;
+
+    }
+
+    .dataTables_wrapper a {
+        color: whitesmoke !important;
+    }
+
+    main {
+        margin-bottom: 80px;
+    }
+
+    table {
+        min-height: 80px;
+    }
+}
+td::after, td::before {
+    display: none !important;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 668px) {
+    :root {
+        font-size: 19px !important;
+    }
+
+    #tTabLibros_wrapper a,
+    #tTabLibros_wrapper label, 
+    #tTabLibros_wrapper #tTabLibros_info 
+    {
+        font-size: 1.3rem !important;
+    }
+
+    table {
+        padding: 20px 30px !important;
+    }
+
+
+    tbody,
+    thead,
+    div label {
+        color: whitesmoke !important;
+        font-size: 2rem;
+    }
+
+    main h1 {
+        border-bottom: solid 1px white;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+    }
+
+    .dataTables_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}

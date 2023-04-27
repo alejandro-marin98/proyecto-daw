@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">  
+<main>
+      <h1 class="title">Formulario de registro</h1>
+      <form action="" method="post" class="register-form">
+        {% csrf_token %}
+          {{ form|crispy }}
+          <input type="submit" name="submit" value="Registrar" class="register"/>
+      </form>
+
+  </main>
+{% endblock %}

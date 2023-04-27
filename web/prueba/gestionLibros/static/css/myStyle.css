@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.dataTables_wrapper {
+    /* background-color:  rgb(240 240 240); */
+    background-color: rgb(240 240 240);
+    padding: 5px;
+    border: solid 1px grey;
+}
+
+table {
+    background-color: aliceblue;
+    border: solid 1px grey;
+    overflow-x: scroll;
+}
+
+body {
+    min-height: 100vh;
+}
+

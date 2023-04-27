@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+  
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- DataTable -->
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" /> {% endcomment %}
+
+  {% comment %} font awesome {% endcomment %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  <!-- Mi codigo -->
+  <link rel="stylesheet" href="{% static 'css/datatables.css' %}">
+  <script src="{% static 'js/misLibros.js' %}" type="module" defer></script>
+  <link rel="stylesheet" href="{% static 'css/libros.css' %}">
+{% endblock %}
+
+{% block content %}
+  <main>
+    <h1>Los libros que has guardado:</h1>
+    <table id="tTabLibros">
+        <thead>
+            <tr>
+                <th>Nombre del libro</th>
+                <th>Estado</th>
+                <th>Página</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in res %}
+            <tr>
+                <td>{{row.book.titulo}}</td>
+                <td>{{row.estado|title}}</td>
+                <td><a href="/libros/getBooks/{{row.book.isbn}}">Link</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+            
+    </table>
+  </main>
+{% endblock %}

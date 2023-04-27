@@ -1,0 +1,409 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dataTables_info,
+.dataTables_paginate {
+    width: 90% !important;
+    align-self: flex-end;
+}
+
+.dataTables_paginate,
+.dataTables_info {
+    align-self: flex-start;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    margin: 6px;
+}
+
+
+.desaparecer {
+    display: none !important;
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+
+.containers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.title {
+    color: white;
+    text-align: center;
+    width: 100%;
+    border-bottom: solid 1px white;
+    margin: 10px 0 70px 0;
+
+}
+
+.table-info {
+    display: flex;
+    justify-content: center;
+}
+
+.dataTables_scrollHead {
+    width: 100%;
+}
+
+
+.table-info tbody {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 60%;
+}
+
+.table-info tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    line-break: anywhere;
+}
+
+.table-info th,
+.table-info td {
+    text-align: center;
+    vertical-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+main * {
+    color: aliceblue;
+}
+
+main ul {
+    display: flex;
+    padding: 0;
+    width: 70%;
+    list-style: none;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-self: center;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    border: ridge 1px gray;
+}
+
+li label {
+    color: black;
+    padding: 10px !important;
+}
+
+li {
+    border-radius: 10px;
+}
+
+main ul li:hover {
+    background-color: rgba(84, 143, 225, 0.758) !important;
+    color: aliceblue !important;
+}
+
+main ul {
+    padding: 4px;
+}
+
+main input[type="submit"] {
+    color: black;
+    width: max-content;
+    align-self: center;
+    padding: 3px;
+    border-radius: 6px;
+    border: solid 1px grey;
+    font-size: 12px;
+    background-color: whitesmoke;
+    margin: 7px 0;
+    font-weight: bold;
+}
+
+main .head {
+    align-self: center;
+    border: solid 1px white;
+    padding: 10px;
+    border-radius: 0;
+    font-weight: bold;
+    max-width: 95%;
+    width: 60%;
+    margin-bottom: 60px !important;
+    font-size: 3rem;
+    border-radius: 7px 7px 0 0;
+}
+
+main ul {
+    border-radius: 0 0 7px 7px;
+    margin-bottom: 20px;
+    background-color: rgba(84, 143, 225, 0.758);
+    border-radius: 20px;
+}
+
+main ul label {
+    padding: 10px;
+    color: white;
+}
+
+
+
+input[type="submit"] {
+    font-size: 0.8rem !important;
+    margin-bottom: 30px !important;
+}
+
+.info td,
+.info th {
+    border-bottom: solid 1px white;
+}
+
+.info,
+.about {
+    margin-bottom: 40px !important;
+}
+
+.container-data {
+    width: 100%;
+}
+
+.form-peticion {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    width: 50%;
+    text-align: center;
+    align-self: center;
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about h1 {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.about p {
+    text-align: center;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+    align-content: center !important;
+}
+
+.list h1 {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.dataTables_wrapper {
+    background-color: rgba(84, 143, 225, 0.758);
+    width: 80% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    justify-items: center !important;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    border: solid 1px grey;
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_scroll {
+    width: 100% !important;
+    align-self: center !important;
+}
+
+.dataTables_length {
+    display: none !important;
+}
+
+.dataTables_filter,
+.dataTables_scroll {
+    padding-top: 20px !important;
+    width: 90% !important;
+}
+
+.dataTables_scroll {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    min-width: 90%;
+    width: 90%;
+}
+
+.table-libros {
+    width: 100% !important;
+}
+
+.info th,
+.info td {
+    font-size: 1.2rem;
+}
+
+th::after,
+th::before {
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    .info th,
+    .info td {
+        font-size: 1rem;
+    }
+
+    .table-info tbody {
+        width: 100%;
+        padding: 10px;
+    }
+
+    p {
+        padding: 0;
+        font-size: 1.4rem;
+        width: 90%;
+    }
+
+    input[type="submit"] {
+        font-size: 0.65rem !important;
+    }
+
+
+    .table-info-info *,
+    h6 {
+        color: black;
+    }
+
+    h6 {
+        text-align: center;
+    }
+
+    .table-info th {
+        display: flex;
+        align-items: center;
+    }
+
+    .table-info td {
+        font-weight: bold;
+    }
+
+    .table-info {
+        margin: 10px;
+
+    }
+
+    main ul {
+        align-self: center;
+        margin-bottom: 50px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px !important;
+        -webkit-text-stroke: 0.3px black;
+        font-weight: bold;
+        max-width: 95%;
+        width: 95%;
+    }
+
+
+    main .head {
+        border-bottom: solid 1px white !important;
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        border: 0;
+    }
+
+
+    li label {
+        color: whitesmoke;
+        font-size: 1.1rem;
+        padding: 5px;
+    }
+
+    .about h1 {
+        font-weight: bold;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .dataTables_wrapper {
+        background-color: rgba(84, 143, 225, 0.758);
+        width: 90% !important;
+        border-radius: 20px !important;
+        padding: 0 !important;
+        margin-bottom: 50px !important;
+    }
+
+    .paginate_button a {
+        color: white !important;
+    }
+
+    .dataTables_length {
+        display: none !important;
+    }
+
+    .disabled {
+        color: white !important;
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    :root {
+        font-size: 20px;
+    }
+
+    p {
+        padding: 0;
+    }
+
+    .table-info td,
+    .table-info th {
+        font-size: 1.2rem;
+
+    }
+
+    h1 {
+        margin: 30px 0;
+    }
+
+    .dataTables_wrapper {
+        padding: 10px;
+    }
+
+    .dataTables_wrapper td,
+    .dataTables_wrapper th {
+        font-size: 1.1rem !important;
+    }
+
+    main ul {
+        margin-bottom: 60px !important;
+    }
+
+}

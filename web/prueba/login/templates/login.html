@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <main>
+    <h1 class="title">Inicio de sesión</h1>  
+    <form method="post" class="form-login">
+        {% csrf_token %}
+          {{ form|crispy }}
+              <input type="submit" name="submit" value="Entrar" class="entrar" />
+      </form>
+
+
+  </main>
+{% endblock %}

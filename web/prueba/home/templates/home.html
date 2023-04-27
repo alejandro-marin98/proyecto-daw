@@ -1,0 +1,33 @@
+{% extends 'base.html' %}  
+
+{% block content %}
+
+{% load static %}
+
+<main>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+
+  {% comment "" %} Libros recientemente añadidos {% endcomment %}
+  
+    <h1 class="title">Bienvenido a la Libroteca</h1>
+    
+  <div class="desc">
+    <h1>¿Qué es la libroteca?</h1>
+    <h3>La libroteca es un espacio web para promover la lectura. Aquí podrás descubrir libros que no conocías, acceder a toda su información junto a una pequeña sinopsis y conocer lo que piensan los otros usuarios sobre el libro.</h3>
+    <h1>¿Qué beneficios obtendré si me registro?</h1>
+    <h3>Al registrarte, podrás acceder a un surtido de funcionalidades muy interesantes:
+      <ul>
+        <li>Compartir tu propia opinión sobre un libro en su página.</li>
+        <li>Guardar en una lista los libros que te interesen y clasificarlos en función de como lo lleves (pendiente, leyendo o leído).</li>
+        <li>Agregar a amigos para poder visitar sus perfiles y ver los libros que han guardado.</li>
+      </ul>
+    </h3>
+  </div>
+
+</main>
+
+  
+{% endblock content %}
